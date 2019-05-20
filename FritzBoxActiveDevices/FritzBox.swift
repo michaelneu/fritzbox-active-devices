@@ -114,6 +114,11 @@ class FritzBox {
                     devices.append(device)
 
                     if devices.count == count {
+                        devices.sort(by: { a, b in
+                            return a.name > b.name
+                        })
+
+                        devices.reverse()
                         completion(devices)
                     }
                 }
