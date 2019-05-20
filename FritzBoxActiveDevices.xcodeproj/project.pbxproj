@@ -10,15 +10,19 @@
 		4CBB1D202293196500BE557A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1D1F2293196500BE557A /* AppDelegate.swift */; };
 		4CBB1D222293196700BE557A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB1D212293196700BE557A /* Assets.xcassets */; };
 		4CBB1D252293196700BE557A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB1D232293196700BE557A /* MainMenu.xib */; };
+		560D94B2E642400BBB912E5E /* Pods_FritzBoxActiveDevices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0415B9E68BB01BEECEAFB75 /* Pods_FritzBoxActiveDevices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05C5A37B8DD9BFA66981D9F6 /* Pods-FritzBoxActiveDevices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FritzBoxActiveDevices.debug.xcconfig"; path = "Target Support Files/Pods-FritzBoxActiveDevices/Pods-FritzBoxActiveDevices.debug.xcconfig"; sourceTree = "<group>"; };
 		4CBB1D1C2293196500BE557A /* FritzBoxActiveDevices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FritzBoxActiveDevices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBB1D1F2293196500BE557A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBB1D212293196700BE557A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CBB1D242293196700BE557A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4CBB1D262293196700BE557A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CBB1D272293196700BE557A /* FritzBoxActiveDevices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FritzBoxActiveDevices.entitlements; sourceTree = "<group>"; };
+		F0415B9E68BB01BEECEAFB75 /* Pods_FritzBoxActiveDevices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FritzBoxActiveDevices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62A28375642221BEA1D4CFD /* Pods-FritzBoxActiveDevices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FritzBoxActiveDevices.release.xcconfig"; path = "Target Support Files/Pods-FritzBoxActiveDevices/Pods-FritzBoxActiveDevices.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560D94B2E642400BBB912E5E /* Pods_FritzBoxActiveDevices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,8 @@
 			children = (
 				4CBB1D1E2293196500BE557A /* FritzBoxActiveDevices */,
 				4CBB1D1D2293196500BE557A /* Products */,
+				FB712BDC0C35965A4AF49342 /* Pods */,
+				BD3BEA0B21A5F684B25AB2EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,24 @@
 			path = FritzBoxActiveDevices;
 			sourceTree = "<group>";
 		};
+		BD3BEA0B21A5F684B25AB2EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0415B9E68BB01BEECEAFB75 /* Pods_FritzBoxActiveDevices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB712BDC0C35965A4AF49342 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05C5A37B8DD9BFA66981D9F6 /* Pods-FritzBoxActiveDevices.debug.xcconfig */,
+				F62A28375642221BEA1D4CFD /* Pods-FritzBoxActiveDevices.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -67,6 +92,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CBB1D2A2293196700BE557A /* Build configuration list for PBXNativeTarget "FritzBoxActiveDevices" */;
 			buildPhases = (
+				BCBDDDAAA19BED9086EB330D /* [CP] Check Pods Manifest.lock */,
 				4CBB1D182293196500BE557A /* Sources */,
 				4CBB1D192293196500BE557A /* Frameworks */,
 				4CBB1D1A2293196500BE557A /* Resources */,
@@ -124,6 +150,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCBDDDAAA19BED9086EB330D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FritzBoxActiveDevices-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CBB1D182293196500BE557A /* Sources */ = {
@@ -265,6 +316,7 @@
 		};
 		4CBB1D2B2293196700BE557A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05C5A37B8DD9BFA66981D9F6 /* Pods-FritzBoxActiveDevices.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FritzBoxActiveDevices/FritzBoxActiveDevices.entitlements;
@@ -284,6 +336,7 @@
 		};
 		4CBB1D2C2293196700BE557A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62A28375642221BEA1D4CFD /* Pods-FritzBoxActiveDevices.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FritzBoxActiveDevices/FritzBoxActiveDevices.entitlements;
