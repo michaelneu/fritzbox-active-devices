@@ -6,5 +6,6 @@ target 'FritzBoxActiveDevices' do
   use_frameworks!
 
   # Pods for FritzBoxActiveDevices
-
+  pod 'Alamofire'
+  pod "SwiftyXMLParser", :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
 end
