@@ -14,9 +14,3 @@ struct NetworkDevice {
     public let name: String
     public let online: Bool
 }
-
-extension NetworkDevice: CustomStringConvertible {
-    public var description: String {
-        return "\(name) (\(ip))"
-    }
-}

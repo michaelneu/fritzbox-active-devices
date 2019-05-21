@@ -26,29 +26,51 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             menu.items.removeAll()
 
             let online = devices.filter({ $0.online })
-            self.addDevicesToMenu(title: "Online", devices: online, to: menu)
+            self.addDevicesToMenu(devices: online, to: menu)
 
             menu.addItem(NSMenuItem.separator())
 
             let offline = devices.filter({ !$0.online })
-            self.addDevicesToMenu(title: "Rest", devices: offline, to: menu)
+            self.addDevicesToMenu(devices: offline, to: menu)
 
             self.appendQuitMenuItem(to: menu)
         }
     }
 
-    private func addDevicesToMenu(title: String, devices: [NetworkDevice], to menu: NSMenu) {
-        let headingItem = NSMenuItem(title: title, action: nil, keyEquivalent: "")
-        headingItem.isEnabled = false
-        menu.addItem(headingItem)
-
+    private func addDevicesToMenu(devices: [NetworkDevice], to menu: NSMenu) {
         for device in devices {
             let deviceItem = NSMenuItem(
-                title: "- \(device.description)",
+                title: "",
                 action: nil,
                 keyEquivalent: ""
             )
 
+            let title = NSMutableAttributedString()
+            let onlineSymbolTitle = NSAttributedString(
+                string: "⬤  ",
+                attributes: [
+                    .foregroundColor:
+                        device.online
+                            ? NSColor(red: 0, green: 0.8, blue: 0, alpha: 0.3)
+                            : NSColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.3),
+                    .font: NSFont.systemFont(ofSize: 10),
+                    .baselineOffset: 2
+                ]
+            )
+
+            let deviceTitle = NSAttributedString(string: device.name)
+            let deviceIp = NSAttributedString(
+                string: "  \(device.ip)",
+                attributes: [
+                    .foregroundColor: NSColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5)
+                ]
+            )
+
+            title.append(onlineSymbolTitle)
+            title.append(deviceTitle)
+            title.append(deviceIp)
+
+            deviceItem.attributedTitle = title
             deviceItem.isEnabled = false
             menu.addItem(deviceItem)
         }
