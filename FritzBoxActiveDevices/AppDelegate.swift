@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(withTitle: "Fetching devices", action: nil, keyEquivalent: "")
         appendQuitMenuItem(to: menu)
 
-        let fb = FritzBox(ip: "192.168.188.1")
+        let fb = FritzBox(ip: "192.168.178.1")
         fb.fetchDevices() { devices in
             menu.items.removeAll()
 
